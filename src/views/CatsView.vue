@@ -5,7 +5,6 @@
       <template  #cell(name)="data">
         <router-link :to="`/pets/${data.index}`">
           {{ data.value }}
-          <div></div>
         </router-link>
       </template>
     </b-table>
