@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>Add a new best friend.</h1>
-    <button class="btn btn-primary">Add New Pet</button>
+    <button @click="togglePetForm" class="btn btn-primary">Add New Pet</button>
     <b-form @submit="handleSubmit" v-if="showPetForm">
 
       <b-form-group id="input-group-2" label="Pet's Name:" label-for="input-2">
@@ -53,8 +53,8 @@ export default {
       }
     }
   },
-  method: {
-    tooglePetForm() {
+  methods: {
+    togglePetForm() {
       this.showPetForm = !this.showPetForm
     },
     handleSubmit() {
